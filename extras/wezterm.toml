@@ -1,0 +1,64 @@
+[metadata]
+name = "stilla"
+origin_url = "https://github.com/dlvandenberg"
+
+[colors]
+  background = "#1b1612"       # base
+  foreground = "#E9E9E9"       # text
+  cursor_bg = "#E9E9E9"        # text
+  cursor_fg = "#1B1612"        # base
+  cursor_border = "#E9E9E9"    # text
+  selection_bg = "#26221E"     # highlight_med
+  selection_fg = "#E9E9E9"     # text
+  scrollbar_thumb = "#322D2A"  # highlight_low
+  split = "#322D2A"            # highlight_low
+  compose_cursor = "#F3B662"   # earth_yellow
+  visual_bell = "#EF6461"      # bittersweet
+
+  ansi = [
+    "#1B1612", # black (muted surface)
+    "#EF6461", # red (bittersweet)
+    "#8EB897", # green (cambridge)
+    "#F3B662", # yellow (earth_yellow)
+    "#58A4B0", # blue (moonstone)
+    "#DD5575", # magenta (blush)
+    "#A67F8E", # cyan (mountbatten)
+    "#E9E9E9", # white (text)
+  ]
+  brights = [
+    "#322D2A", # bright black (highlight low)
+    "#EF6461", # bright red (bittersweet)
+    "#8EB897", # bright green (cambridge)
+    "#F3B662", # bright yellow (earth_yellow)
+    "#58A4B0", # bright blue (moonstone)
+    "#DD5575", # bright magenta (blush)
+    "#A67F8E", # bright cyan (mountbatten)
+    "#F6F6F6", # bright white (near white)
+  ]
+
+[colors.tab_bar]
+  background = '#26221E'       # match highlight_med; subtle contrast with base
+
+[colors.tab_bar.active_tab]
+  bg_color = '#F3B662'         # earth_yellow (already in your palette, warm accent)
+  fg_color = '#1B1612'         # base (readable on earth_yellow)
+  intensity = 'Bold'
+
+[colors.tab_bar.inactive_tab]
+  bg_color = '#322D2A'         # highlight_low
+  fg_color = '#B2B2B2'
+  
+[colors.tab_bar.inactive_tab_hover]
+  bg_color = '#58A4B0'         # moonstone (blue accent for hover)
+  fg_color = '#1B1612'         # dark text for clarity
+
+[colors.tab_bar.new_tab]
+  bg_color = '#26221E'         # match inactive surface
+  fg_color = '#A67F8E'         # mountbatten (pleasant highlight)
+  
+[colors.tab_bar.new_tab_hover]
+  bg_color = '#EF6461'         # bittersweet (red accent, energetic hover)
+  fg_color = '#E9E9E9'         # text
+
+
+
