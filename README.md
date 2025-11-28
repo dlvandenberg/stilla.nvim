@@ -3,6 +3,7 @@
         Stilla for <a href="https://neovim.io/">Neovim</a>
     </h3>
     <h5>/ˈstɪtla/ - stilla : From Old Norse: “to calm down” - minimal neovim theme</h5>
+    <img src="https://i.imgur.com/kLBy4ge.png" title="Neovim Stilla colorscheme" style="width: 100%; max-width: 700px; text-align: center;"/>
 </div>
 
 ## Features
