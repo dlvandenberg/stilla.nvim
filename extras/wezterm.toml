@@ -8,12 +8,20 @@ origin_url = "https://github.com/dlvandenberg"
   cursor_bg = "#E9E9E9"        # text
   cursor_fg = "#1B1612"        # base
   cursor_border = "#E9E9E9"    # text
-  selection_bg = "#26221E"     # highlight_med
+  selection_bg = "#6B5F49"     # highlight_med
   selection_fg = "#E9E9E9"     # text
   scrollbar_thumb = "#322D2A"  # highlight_low
   split = "#322D2A"            # highlight_low
   compose_cursor = "#F3B662"   # earth_yellow
   visual_bell = "#EF6461"      # bittersweet
+
+# Make Copy Mode selections obvious (active = where your cursor is)
+  copy_mode_active_highlight_bg = { Color = "#6B5F49" }
+  copy_mode_active_highlight_fg = { Color = "#1B1612" }
+
+# Keep inactive regions distinguishable but softer
+  copy_mode_inactive_highlight_bg = { Color = "#58A4B0" }  # moonstone
+  copy_mode_inactive_highlight_fg = { AnsiColor = "Black" }  # or Color="#1B1612"
 
   ansi = [
     "#1B1612", # black (muted surface)
@@ -59,6 +67,7 @@ origin_url = "https://github.com/dlvandenberg"
 [colors.tab_bar.new_tab_hover]
   bg_color = '#EF6461'         # bittersweet (red accent, energetic hover)
   fg_color = '#E9E9E9'         # text
+
 
 
 

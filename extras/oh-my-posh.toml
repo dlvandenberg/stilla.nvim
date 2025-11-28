@@ -1,0 +1,125 @@
+console_title_template = ' {{ .Folder }} :: {{if .Root}}Admin{{end}}'
+version = 3
+final_space = true
+
+[palette]
+  base       = '#1B1612'
+  surface    = '#26221E'
+  overlay    = '#322D2A'
+  muted      = '#B096A6'
+  subtle     = '#DAC2D1'
+  text       = '#E9E9E9'
+  bittersweet       = '#EF6461'
+  earth_yellow       = '#F3B662'
+  mountbatten       = '#A67F8E'
+  moonstone       = '#58A4B0'
+  cambridge       = '#8EB897'
+  blush       = '#DD5575'
+  highlight  = '#494541'
+  highlight_med = '#26221E'
+  highlight_low = '#322D2A'
+  white_smoke = '#e0def4'
+  terminal_bg = '#191724'
+
+[secondary_prompt]
+  template = '➜ '
+  foreground = 'p:earth_yellow'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '➜ '
+  foreground = 'p:earth_yellow'
+  background = 'transparent'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    template = '{{.Icon}} '
+    type = 'os'
+    style = 'plain'
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    template = ' {{ .Path }}'
+    foreground = 'p:cambridge'
+    type = 'path'
+    style = 'plain'
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      home_icon = '~'
+      style = 'mixed'
+
+  [[blocks.segments]]
+    template = ' {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}'
+    foreground = 'p:subtle'
+    type = 'git'
+    style = 'plain'
+    foreground_templates = ['{{ if or (.Working.Changed) (.Staging.Changed) }}p:mountbatten{{ end }}', '{{ if and (gt .Ahead 0) (gt .Behind 0)}}p:cambridge{{ end }}', '{{ if gt .Ahead 0 }}p:blush{{ end }}', '{{ if gt .Behind 0 }}p:moonstone{{ end }}']
+    [blocks.segments.properties]
+      branch_icon = ' '
+      cache_duration = 'none'
+      fetch_status = true
+
+  [[blocks.segments]]
+    template = ' '
+    foreground = 'p:bittersweet'
+    type = 'status'
+    style = 'plain'
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'right'
+  overflow = 'hide'
+
+  [[blocks.segments]]
+    template = ' {{ .Full }} '
+    foreground = 'p:cambridge'
+    type = 'node'
+    style = 'plain'
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    template = 'ﳑ {{ .Full}} '
+    foreground = 'p:moonstone'
+    type = 'go'
+    style = 'plain'
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    template = '</> {{ .FormattedMs }} '
+    foreground = 'p:muted'
+    type = 'executiontime'
+    style = 'plain'
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    template = '  {{ .CurrentDate | date .Format }}'
+    foreground = 'p:blush'
+    type = 'time'
+    style = 'plain'
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      threshold = 500
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '❯'
+    foreground = 'p:earth_yellow'
+    type = 'text'
+    style = 'plain'
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+
